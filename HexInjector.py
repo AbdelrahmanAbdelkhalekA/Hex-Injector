@@ -90,7 +90,10 @@ def generateoutput():
                         x
                     ] = 1  # says the values which have the been found whith addrresses
                 else:
-                    messagebox.showerror("Error", f"Your serial number doesnt not match the number of required bits {val}")
+                    messagebox.showerror(
+                        "Error",
+                        f"Your serial number doesnt not match the number of required bits {val}",
+                    )
 
         file.write(pyhtnList[index] + "\n")
     errorMessage = ""
@@ -164,7 +167,11 @@ def open_file():
     global pyhtnList
     file_path = filedialog.askopenfilename(
         defaultextension=".hex",
-        filetypes=[("Hex Files", "*.hex"), ("Text Files", "*.txt"), ("All Files", "*.*")],
+        filetypes=[
+            ("Hex Files", "*.hex"),
+            ("Text Files", "*.txt"),
+            ("All Files", "*.*"),
+        ],
     )
     if "file_path" in globals():
         try:
